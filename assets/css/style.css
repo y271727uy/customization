@@ -17,6 +17,10 @@ body {
 }
 
 .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   padding: 28px 0;
 }
 
@@ -25,6 +29,23 @@ body {
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 15px;
+}
+
+.site-nav a {
+  color: #475569;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: #172033;
+  text-decoration: underline;
 }
 
 .page {
@@ -69,6 +90,11 @@ li + li {
 }
 
 @media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .page {
     padding: 28px 22px;
   }
