@@ -47,24 +47,72 @@ body {
   line-height: 1.6;
 }
 
-.site-nav {
+.file-tree {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   font-size: 15px;
 }
 
-.site-nav a {
+.file-tree a,
+.tree-folder summary {
   display: block;
-  padding: 9px 12px;
+  padding: 7px 10px;
   color: #334155;
   border-radius: 6px;
   text-decoration: none;
+  cursor: pointer;
+  user-select: none;
 }
 
-.site-nav a:hover {
+.file-tree a:hover,
+.tree-folder summary:hover {
   color: #0f172a;
   background: #f1f5f9;
+}
+
+.tree-page::before {
+  content: "□";
+  margin-right: 8px;
+  color: #64748b;
+}
+
+.tree-folder {
+  margin-top: 4px;
+  padding-left: 6px;
+}
+
+.tree-folder summary {
+  font-weight: 600;
+  list-style: none;
+}
+
+.tree-folder summary::-webkit-details-marker {
+  display: none;
+}
+
+.tree-folder summary::before {
+  content: "▾";
+  display: inline-block;
+  width: 18px;
+  color: #64748b;
+}
+
+.tree-folder:not([open]) summary::before {
+  content: "▸";
+}
+
+.tree-folder a {
+  margin-left: 20px;
+  padding-left: 18px;
+  border-left: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.tree-folder a::before {
+  content: "□";
+  margin-right: 8px;
+  color: #94a3b8;
 }
 
 .page {
@@ -118,9 +166,12 @@ li + li {
     border-bottom: 1px solid #e5e7eb;
   }
 
-  .site-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .file-tree {
+    gap: 6px;
+  }
+
+  .tree-folder a {
+    margin-left: 16px;
   }
 
   .content-shell {
