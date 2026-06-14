@@ -36,7 +36,8 @@ permalink: /pages/overview/
 其中绷带（Hotai）与创可贴（Bansoukou）会替换字节码 class 文件，需要一定 Java 基础。而保险库补丁（Vault Patcher）用于替换与汉化硬编码语言键，相对复杂。此类型模组均易导致游戏崩溃。
 
 ### 基于 Forge/Fabric 加载器提供的 Mixin 与 coremod 的魔改
-此类型魔改涉及 Java 语言，需要一定的基础，并需要进行 forge/fabric 模组开发。其中 Mixin 是现代更加推荐和优雅的注入手段，可以通过不同的注解去对类进行不同程度的修改。但是为了确保兼容性需要尽量避免使用 @Overwrite 注解。此外还存在 MixinSquared 这个 Mixin 库，用于"Mixin"进其他模组的 Mixin。   
+此类型魔改涉及 Java 语言，需要一定的基础，并需要进行 forge/fabric 模组开发。其中 Mixin 是现代更加推荐和优雅的注入手段，可以通过不同的注解去对类进行不同程度的修改。但是为了确保兼容性需要尽量避免使用 @Overwrite 注解。此外还存在 MixinSquared 这个 Mixin 库，用于"Mixin"进其他模组的 Mixin。 
+  
 CoreMod（核心模组）是基于 Forge 体系的一种机制，其核心能力是：在 Minecraft / Java 类被加载之前，直接修改字节码（bytecode），依赖 ASM 做复杂的字节码转换。CoreMod 在 1.12.2/1.7.10 版本较为流行，但随着 Mixin 生态的完善，CoreMod 已逐渐不再在高版本中被使用，并随着版本更新使用门槛正在逐步提升。此外 CoreModAPI 与 DangerAPI 在高版本提供了相对易用且暴力的 coremod 实现库。
 
 [返回首页]({{ '/' | relative_url }})
