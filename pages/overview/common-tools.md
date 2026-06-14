@@ -15,4 +15,4 @@ permalink: /pages/overview/common-tools/
 - 脚本系统：处理事件、阶段、兼容和复杂逻辑
 - 任务系统：引导玩家理解整合包流程
 
-[返回概述首页]({{ '/pages/overview/' | relative_url }})
+[返回概述]({{ '/pages/overview/' | relative_url }})

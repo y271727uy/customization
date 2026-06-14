@@ -17,4 +17,4 @@ permalink: /pages/overview/what-is-customization/
 - 它是否会制造新的平衡问题
 - 玩家是否能理解这个变化
 
-[返回概述首页]({{ '/pages/overview/' | relative_url }})
+[返回概述]({{ '/pages/overview/' | relative_url }})
