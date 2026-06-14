@@ -1,2 +1,2 @@
 # customization
-魔改内容
+Minecraft主流版本魔改详解
